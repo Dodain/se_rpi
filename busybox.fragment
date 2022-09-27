@@ -1,0 +1,2 @@
+CONFIG_XXD=y
+CONFIG_AWK=y
