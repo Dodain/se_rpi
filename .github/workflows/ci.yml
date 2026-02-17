@@ -16,3 +16,6 @@ jobs:
            echo "LAB_MESSAGE=$LAB_MESSAGE"
            echo "GITHUB_ACTOR=$GITHUB_ACTOR"
            echo "GITHUB_REF=$GITHUB_REF"
+      - name: Attempt to print a secret (should be masked)
+        run: |
+            echo "LAB_SECRET=$LAB_SECRET"
