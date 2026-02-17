@@ -9,13 +9,21 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
+
+    env:
+      LAB_MESSAGE: ${{ vars.LAB_MESSAGE }}
+      LAB_SECRET: ${{ secrets.LAB_SECRET }}
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Show specific variables (safe)
         run: |
-           echo "LAB_MESSAGE=$LAB_MESSAGE"
-           echo "GITHUB_ACTOR=$GITHUB_ACTOR"
-           echo "GITHUB_REF=$GITHUB_REF"
+          echo "LAB_MESSAGE=$LAB_MESSAGE"
+          echo "GITHUB_ACTOR=$GITHUB_ACTOR"
+          echo "GITHUB_REF=$GITHUB_REF"
+
       - name: Attempt to print a secret (should be masked)
         run: |
-            echo "LAB_SECRET=$LAB_SECRET"
+          echo "LAB_SECRET=$LAB_SECRET"
+
