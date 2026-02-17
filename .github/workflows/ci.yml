@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Say hello + show repo files
+      - name: Show specific variables (safe)
         run: |
-          echo "Hello from GitHub Actions!"
-          ls -la
+           echo "LAB_MESSAGE=$LAB_MESSAGE"
+           echo "GITHUB_ACTOR=$GITHUB_ACTOR"
+           echo "GITHUB_REF=$GITHUB_REF"
