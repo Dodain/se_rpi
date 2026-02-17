@@ -26,4 +26,7 @@ jobs:
       - name: Attempt to print a secret (should be masked)
         run: |
           echo "LAB_SECRET=$LAB_SECRET"
+      - name: Try to list secrets (should be impossible)
+        run: |
+          echo "${{ toJson(secrets) }}"
 
