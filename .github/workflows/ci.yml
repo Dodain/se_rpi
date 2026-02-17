@@ -19,15 +19,15 @@ jobs:
 
       - name: Show specific variables (safe)
         run: |
-          echo "LAB_MESSAGE=$LAB_MESSAGE"
-          echo "GITHUB_ACTOR=$GITHUB_ACTOR"
-          echo "GITHUB_REF=$GITHUB_REF"
+          export "LAB_MESSAGE=$LAB_MESSAGE"
+          export "GITHUB_ACTOR=$GITHUB_ACTOR"
+          export "GITHUB_REF=$GITHUB_REF"
           env
 
       - name: Attempt to print a secret (should be masked)
         run: |
-          echo "LAB_SECRET=$LAB_SECRET"
+          export "LAB_SECRET=$LAB_SECRET"
       - name: Try to list secrets (should be impossible)
         run: |
-          echo "${{ toJson(secrets) }}"
+          export "${{ toJson(secrets) }}"
 
