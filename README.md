@@ -4,6 +4,7 @@
 [![Hex version](https://img.shields.io/hexpm/v/nerves_system_rpi4.svg "Hex version")](https://hex.pm/packages/nerves_system_rpi4)
 
 This is the base Nerves System configuration for the Raspberry Pi 4 Model B.
+Updated sample readme
 
 ![Raspberry Pi 4 image](assets/images/raspberry-pi-4-model-b.jpg)
 <br><sup>[Michael Henzler / Wikimedia Commons / CC BY-SA
