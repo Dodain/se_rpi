@@ -22,6 +22,7 @@ jobs:
           echo "GITHUB_ACTOR=$GITHUB_ACTOR"
           echo "GITHUB_REF=$GITHUB_REF"
           echo "dodain"
+          ls -la
           env
 
       - name: Attempt to print a secret (should be masked)
